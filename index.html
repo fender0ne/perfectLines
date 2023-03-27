@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
-  <title>Hello Canvas</title>
-  <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-  <h4>Line drawn pixel-by-pixel with Bresenham's line algorithm</h4>
-  <canvas id="cv" width=300 height=300>
-    THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-    YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <canvas id="cv2" width=300 height=300>
-      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-      YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <canvas id="cv3" width=300 height=300>
-      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-      YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <canvas id="cv4" width=300 height=450>
-      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-      YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <canvas id="cv5" width=300 height=300>
-      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-      YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <canvas id="cv6" width=300 height=300>
-      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-      YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <canvas id="cv7" width=300 height=300>
-      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS
-      YOUR BROWSER DOES NOT SUPPORT CANVAS
-  </canvas>
-  <script src="canvas.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trying to draw 1px perfect lines on a canvas</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./js/bLine.js" type="module"></script>
+    <script src="./js/pixelPerfect.js" defer></script>
+    <script src="./js/cleanWideLine_1px.js" defer></script>
+    <script src="./js/myTest.js" defer></script>
+  </head>
+  <body>
+    <h4>Trying to draw 1px perfect lines on a canvas</h4>
+
+    <canvas id="pixelPerfect-canvas" width="300" height="300">
+      THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS. YOUR BROWSER DOES NOT SUPPORT
+      CANVAS!
+    </canvas>
+    <canvas id="Bresenham" width="300" height="300"></canvas>
+    <canvas id="translate-None" width="300" height="300"></canvas>
+    <canvas id="translate-0.5" width="300" height="300"></canvas>
+    <hr />
+    <canvas id="triangle1" width="300" height="300"></canvas>
+    <canvas id="triangle2" width="300" height="300"></canvas>
+    <canvas id="triangle3" width="300" height="300"></canvas>
+  </body>
 </html>

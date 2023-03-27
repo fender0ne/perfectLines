@@ -1,10 +1,18 @@
-/* #cv {
-  border: 1px solid black;
-  display: block;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-} */
+body {
+  background-color: ivory;
+  margin: auto;
+}
 
-body{ background-color: ivory; }
-canvas{border:1px solid red;}
+canvas {
+  border: 1px solid red;
+}
+
+#pixelPerfect-canvas {
+  /* image-rendering: -moz-crisp-edges; */
+  /* image-rendering: -webkit-crisp-edges; */
+  image-rendering: pixelated;
+  /* image-rendering: -webkit-optimize-contrast; */
+  /* image-rendering: crisp-edges; */
+  /* width: 100vh; */
+  /* height: 100vh; */
+}
