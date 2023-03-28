@@ -1,4 +1,6 @@
 // Bresenham's line algorithm
+// https://stackoverflow.com/questions/25277023/complete-solution-for-drawing-1-pixel-line-on-html5-canvas?noredirect=1&lq=1
+// by markE 13 Aug, 2014
 
 class bLine {
   #canvasWidth = 300;
@@ -37,7 +39,7 @@ class bLine {
   }
 
   // Refer to:
-  // http://rosettacode.org/wiki/Bitmap/Bresenham's_line_algorithm#JavaScript
+  // https://rosettacode.org/wiki/Bitmap/Bresenham's_line_algorithm#JavaScript
 
   line(x0, y0, x1, y1) {
     let dx = Math.abs(x1 - x0);
