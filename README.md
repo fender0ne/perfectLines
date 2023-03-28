@@ -1,9 +1,16 @@
-# Perfect Lines on HTML5 Canvas
+# __Perfect Lines__ on HTML5 Canvas?
 
 See it here in action: [demo](https://fender0ne.github.io/perfectLines/)
 
-## Trying to draw 1px perfect lines on a web browser's canvas [^1]
+## Trying to draw __1px perfect lines__ on a web browser's canvas [^1]  
+---
+&nbsp; 
 
+> First off, check out this article:
+> [How the Browser Renders 1px / Odd-Pixel Wide Lines](https://usefulangle.com/post/17/html5-canvas-drawing-1px-crisp-straight-lines)  
+
+&nbsp; 
+  
 We do several line drawing tests using various techniques to see how the result looks best. Judge for yourself.
 
 Information and suggested code from several stackoverflow users has been used:
@@ -15,6 +22,12 @@ Information and suggested code from several stackoverflow users has been used:
 3. [Bresenham's line algorithm by markE Aug, 2014](https://stackoverflow.com/questions/25277023/complete-solution-for-drawing-1-pixel-line-on-html5-canvas?noredirect=1&lq=1 )
 
 4. My own tests using translate(0.5, 0.5) as suggested by GameAlchemist and other authors.
+   
+5. We could extend to __perfect rectangles__ with/without __fill__ and with/without __borders__. (See same in the [demo](https://fender0ne.github.io/perfectLines/))
+
+&nbsp; 
+
+---  
 
  [^1]: We haven't focused on improving the javascript code, and you may see old code getting mixed up with new one.  
        Non-judgment is a simple visual test.
