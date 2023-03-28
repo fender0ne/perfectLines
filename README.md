@@ -1,4 +1,6 @@
-# Trying to draw 1px perfect lines on a web browser's canvas [^1]
+# Perfect Lines on HTML5 Canvas
+
+## Trying to draw 1px perfect lines on a web browser's canvas [^1]
 
 We do several line drawing tests using various techniques to see how the result looks best. Judge for yourself.
 
