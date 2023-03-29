@@ -4,17 +4,17 @@
 function drawTriangle(ctx, x, y, thk, alpha) {
   ctx.save();
   ctx.translate(x, y);
-  ctx.fillText(
-    `line drawn at (${x}, ${y}) with lineWidth ${thk} and alpha ${alpha}`,
-    0,
-    0
-  );
-  ctx.moveTo(50, 100);
-  ctx.lineTo(200, 100);
-  ctx.lineTo(50, 20);
+  ctx.font = "12px Consolas, 'Courier New', Courier, monospace";
+  ctx.fillText(`translate(${x},${y}).`, 0, 0);
+  ctx.fillText(`lineWidth ${thk} and alpha ${alpha}`, 0, 14);
+
+  ctx.moveTo(50, 110);
+  ctx.lineTo(200, 110);
+  ctx.lineTo(50, 30);
   ctx.closePath();
   ctx.lineWidth = thk;
   ctx.globalAlpha = alpha;
+  ctx.strokeStyle = "blue";
   ctx.stroke();
   ctx.restore();
 }

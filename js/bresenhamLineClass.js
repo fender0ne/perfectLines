@@ -15,6 +15,7 @@ class bLine {
       this.#canvasWidth = canvas.width;
       this.#canvasHeight = canvas.height;
       this.#ctx = canvas.getContext("2d");
+      this.#ctx.font = "14px Consolas, 'Courier New', Courier, monospace";
       this.#ctx.fillText(`Bresenham's line algorithm`, 10, 20);
 
       this.#imgData = this.#ctx.getImageData(

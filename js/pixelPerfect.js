@@ -71,7 +71,7 @@ function pixelPerfectLine(x1, y1, x2, y2) {
   // Multiple your stroke thickness  by a pixel ratio!
   context.lineWidth = thickness * pixelRatio;
 
-  context.strokeStyle = "Black";
+  context.strokeStyle = "Blue";
   context.moveTo(getSharpPixel(thickness, x1), getSharpPixel(thickness, y1));
   context.lineTo(getSharpPixel(thickness, x2), getSharpPixel(thickness, y2));
   context.stroke();
@@ -101,6 +101,8 @@ function pixelPerfectRectangle(x, y, w, h, thickness, useDash) {
 
 function redraw() {
   context.clearRect(0, 0, canvas.width, canvas.height);
+  context.font = "11px Consolas, 'Courier New', Courier, monospace";
+  context.fillStyle = "black";
   context.fillText(`Pixel perfect line 1px drawing on HTML5 canvas.`, 10, 20);
 
   pixelPerfectLine(50, 50, 200, 250);
