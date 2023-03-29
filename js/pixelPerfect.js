@@ -96,23 +96,42 @@ function pixelPerfectRectangle(x, y, w, h, thickness, useDash) {
     Math.floor(w),
     Math.floor(h)
   );
+
+  context.fillStyle = "blue";
+  context.fillRect(
+    getSharpPixel(thickness, x),
+    getSharpPixel(thickness, y),
+    Math.floor(w),
+    Math.floor(h)
+  );
+
+  context.fillStyle = "green";
+  context.fillRect(
+    getSharpPixel(thickness, x + Math.floor(w) + 10),
+    getSharpPixel(thickness, y),
+    Math.floor(w),
+    Math.floor(h)
+  );
+
   context.restore();
 }
 
 function redraw() {
   context.clearRect(0, 0, canvas.width, canvas.height);
-  context.font = "11px Consolas, 'Courier New', Courier, monospace";
+  context.font = "14px Consolas, 'Courier New', Courier, monospace";
   context.fillStyle = "black";
-  context.fillText(`Pixel perfect line 1px drawing on HTML5 canvas.`, 10, 20);
+  context.fillText(`Pixel perfect?`, 10, 20);
 
-  pixelPerfectLine(50, 50, 200, 250);
+  pixelPerfectLine(260, 150, 260, 250);
+  pixelPerfectLine(190, 200, 290, 200);
+  pixelPerfectLine(50, 50, 50, 250);
   pixelPerfectLine(50, 50, 250, 250);
-  pixelPerfectLine(50, 50, 100, 250);
-  pixelPerfectLine(120, 25, 120, 250);
-  pixelPerfectLine(150, 25, 150, 250);
-  pixelPerfectRectangle(10, 25, 200.3, 43.2, 1, false);
-  pixelPerfectRectangle(41, 42, 150.3, 43.2, 1, true);
-  pixelPerfectRectangle(102, 100, 150.3, 193.2, 2, true);
+  pixelPerfectLine(50, 50, 150, 250);
+  pixelPerfectLine(25, 225, 250, 225);
+
+  pixelPerfectRectangle(100, 30, 30, 100, 1, false);
+  // pixelPerfectRectangle(41, 42, 150.3, 43.2, 1, true);
+  // pixelPerfectRectangle(102, 100, 150.3, 193.2, 2, true);
 }
 
 function getSharpPixel(thickness, pos) {

@@ -8,14 +8,14 @@ const canvas2 = document.getElementById("translate-None");
 const ctx2 = canvas2.getContext("2d");
 ctx2.font = "14px Consolas, 'Courier New', Courier, monospace";
 ctx2.fillStyle = "black";
-ctx2.fillText("Drawing with translate(0, 0)", 10, 20);
+ctx2.fillText("translate(0, 0)", 10, 20);
 DrawExamples(ctx2);
 
 const canvas3 = document.getElementById("translate-0.5");
 const ctx3 = canvas3.getContext("2d");
 ctx3.font = "14px Consolas, 'Courier New', Courier, monospace";
 ctx3.fillStyle = "black";
-ctx3.fillText("Drawing with translate(0.5, 0.5)", 10, 20);
+ctx3.fillText("translate(0.5, 0.5)", 10, 20);
 ctx3.translate(0.5, 0.5);
 DrawExamples(ctx3);
 
