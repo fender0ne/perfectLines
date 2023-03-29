@@ -45,7 +45,7 @@ function DrawExamples(ctx) {
   ctx.fillStyle = "green";
   ctx.fillRect(calculateNewX(1), y, width, height);
 
-  // 2: Rectangle using rect w fill color eqyual to the background color
+  // 2: Rectangle using rect w fill color equal to the background color
   // Note: almost indistinguishable between translate(0,0) and translate(0.5, 0.5),
   // but the border (outline) looks slightly better w translate(0.5, 0.5)
   ctx.beginPath();
@@ -60,7 +60,7 @@ function DrawExamples(ctx) {
   // 3: Rectangle using rect w/o fill
   ctx.beginPath();
   ctx.strokeStyle = "blue";
-  ctx.rect(calculateNewX(3), y, width, height);
+  ctx.rect(calculateNewX(3) + 0.5, y + 0.5, width, height);
   ctx.stroke();
   ctx.closePath();
 
