@@ -16,64 +16,56 @@ ctx3.translate(0.5, 0.5);
 DrawExamples(ctx3);
 
 function DrawExamples(ctx) {
-  // Filled Rectangle using rect
+  const x = 100;
+  const y = 30;
+  const gap = 10;
+  const width = 30;
+  const height = 100;
+
+  function calculateNewX(i) {
+    return x + (width + gap) * i;
+  }
+
+  // Rectangles ----------------------------------------------------------------------------------------------
+  // 0: Filled Rectangle using rect
   ctx.beginPath();
   ctx.fillStyle = "blue";
   ctx.strokeStyle = "red";
-  ctx.rect(135, 30, 50, 100);
+  ctx.rect(x, y, width, height);
   ctx.stroke();
   ctx.fill();
   ctx.closePath();
 
-  // Rectangle using rect w fill
-  ctx.beginPath();
-  ctx.fillStyle = "ivory";
-  ctx.strokeStyle = "blue";
-  ctx.rect(200, 30, 50, 100);
-  ctx.stroke();
-  ctx.fill();
-  ctx.closePath();
-
-  // Rectangle using rect w/o fill
-  ctx.beginPath();
-  ctx.strokeStyle = "blue";
-  ctx.rect(245, 10, 50, 100);
-  ctx.stroke();
-  ctx.closePath();
-
-  // Rectangle using strokeRect
-  ctx.strokeRect(220, 50, 50, 100);
-
-  // Rectangle using fillRect
+  // 1: Rectangle using fillRect: it does not draw the outline
+  // Note: better w translate(0,0) than w translate(0.5, 0.5)
   ctx.fillStyle = "green";
-  ctx.fillRect(230, 120, 50, 100);
+  ctx.fillRect(calculateNewX(1), y, width, height);
 
-  // Vertical line using rect
+  // 2: Rectangle using rect w fill color eqyual to the background color
+  // Note: almost indistinguishable between translate(0,0) and translate(0.5, 0.5),
+  // but the border (outline) looks slightly better w translate(0.5, 0.5)
   ctx.beginPath();
-  ctx.fillStyle = "ivory";
-  ctx.rect(200, 150, 0, 100);
-  ctx.stroke();
-  ctx.fill();
-  ctx.closePath();
-
-  // Horizontal line using rect
-  ctx.beginPath();
-  ctx.fillStyle = "ivory";
-  ctx.rect(150, 200, 100, 0);
-  ctx.stroke();
-  ctx.fill();
-  ctx.closePath();
-
-  // Horizontal line using lineTo
-  ctx.beginPath();
-  ctx.lineWith = 1;
-  ctx.moveTo(25, 225);
-  ctx.lineTo(250, 225);
-  ctx.stroke();
-  ctx.closePath();
-
-  // Open Triangles
+  // ctx.fillStyle = "ivory";
+  ctx.fillStyle = "yellow";
   ctx.strokeStyle = "blue";
+  ctx.rect(calculateNewX(2), y, width, height);
+  ctx.stroke();
+  ctx.fill(); // !important
+  ctx.closePath();
+
+  // 3: Rectangle using rect w/o fill
+  ctx.beginPath();
+  ctx.strokeStyle = "blue";
+  ctx.rect(calculateNewX(3), y, width, height);
+  ctx.stroke();
+  ctx.closePath();
+
+  // 4: Rectangle using strokeRect (outlined rectangle)
+  // Note: better w translate(0.5,0.5) than w translate(0, 0)
+  ctx.strokeRect(calculateNewX(4), y, width, height);
+
+  // Lines ---------------------------------------------------------------------------------------------------
+  // Note: all 1px lines are better w translate(0.5,0.5) than w translate(0, 0)
 
   // Vertical line using lineTo
   ctx.beginPath();
@@ -97,5 +89,38 @@ function DrawExamples(ctx) {
   ctx.moveTo(50, 50);
   ctx.lineTo(150, 250);
   ctx.stroke();
+  ctx.closePath();
+
+  // Horizontal line using lineTo
+  ctx.beginPath();
+  ctx.lineWith = 1;
+  ctx.moveTo(25, 225);
+  ctx.lineTo(250, 225);
+  ctx.stroke();
+  ctx.closePath();
+
+  // Vertical line using rect: no really a line!
+  ctx.beginPath();
+  ctx.fillStyle = "ivory";
+  ctx.rect(75, 140, 1, 100);
+  ctx.stroke();
+  ctx.fill();
+  ctx.closePath();
+
+  // Vertical line using rect
+  ctx.beginPath();
+  ctx.strokeStyle = "blue";
+  ctx.fillStyle = "yellow";
+  ctx.rect(260, 150, 0, 100);
+  ctx.stroke();
+  ctx.fill();
+  ctx.closePath();
+
+  // Horizontal line using rect
+  ctx.beginPath();
+  ctx.fillStyle = "ivory";
+  ctx.rect(190, 200, 100, 0);
+  ctx.stroke();
+  ctx.fill();
   ctx.closePath();
 }
