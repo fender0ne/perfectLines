@@ -21,11 +21,11 @@ function drawTriangle(ctx, x, y, thk, alpha) {
 
 var ctx = document.getElementById("triangle1").getContext("2d");
 drawTriangle(ctx, 10, 20, 1.0, 1.0);
-drawTriangle(ctx, 10.5, 140 + 20.5, 1.0, 1.0);
+drawTriangle(ctx, 10.5, 20.5 + 140, 1.0, 1.0);
 
 var ctx = document.getElementById("triangle2").getContext("2d");
 drawTriangle(ctx, 10.5, 20.5, 0.25, 1.0);
-drawTriangle(ctx, 10.5, 140 + 20.5, 1.0, 0.5);
+drawTriangle(ctx, 10.5, 20.5 + 140, 1.0, 0.5);
 
 var ctx = document.getElementById("triangle3").getContext("2d");
 drawTriangle(ctx, 10, 20, 2.0, 1.0);
