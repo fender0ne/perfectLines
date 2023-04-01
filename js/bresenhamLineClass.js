@@ -3,36 +3,42 @@
 // by markE 13 Aug, 2014
 
 class bLine {
-  #canvasWidth = 300;
-  #canvasHeight = 300;
+  // By default, the browser creates canvas elements with a width of 300 pixels and a height of 150 pixels.
+  #canvas;
   #ctx;
   #imgData;
   #data;
-  #wrongCavas = TypeError("Canvas not supported");
+  #wrongCavas = TypeError("Canvas ERROR");
+  #wrongCavasId = TypeError("Canvas Id not valid");
 
-  constructor(canvas) {
-    if (canvas.getContext) {
-      this.#canvasWidth = canvas.width;
-      this.#canvasHeight = canvas.height;
-      this.#ctx = canvas.getContext("2d");
+  constructor(canvasId) {
+    if (typeof canvasId === "string") {
+      this.#canvas = document.getElementById(canvasId);
+    } else {
+      console.log("Canvas Id not valid");
+      throw this.#wrongCavasId;
+    }
+
+    if (this.#canvas.getContext) {
+      this.#ctx = this.#canvas.getContext("2d");
       this.#ctx.font = "14px Consolas, 'Courier New', Courier, monospace";
       this.#ctx.fillText(`Bresenham's line algorithm`, 10, 20);
 
       this.#imgData = this.#ctx.getImageData(
         0,
         0,
-        this.#canvasWidth,
-        this.#canvasHeight
+        this.#canvas.width,
+        this.#canvas.height
       );
       this.#data = this.#imgData.data;
     } else {
-      console.log("Canvas not supported");
+      console.log("Canvas ERROR");
       throw this.#wrongCavas;
     }
   }
 
   #setPixel(x, y) {
-    const n = (y * this.#canvasWidth + x) * 4;
+    const n = (y * this.#canvas.width + x) * 4;
     this.#data[n + 0] = 0;
     this.#data[n + 1] = 0;
     this.#data[n + 2] = 255;
@@ -63,6 +69,20 @@ class bLine {
       }
     }
     this.#ctx.putImageData(this.#imgData, 0, 0);
+  }
+
+  rectangle(x, y, width, height) {
+    this.line(x, y, x + width, y);
+    this.line(x + width, y, x + width, y + height);
+    this.line(x + width, y + height, x, y + height);
+    this.line(x, y + height, x, y);
+  }
+
+  // by copilot 1 Apr, 2023
+  rectangleFilled(x, y, width, height) {
+    for (let i = x; i <= x + width; i++) {
+      this.line(i, y, i, y + height);
+    }
   }
 }
 

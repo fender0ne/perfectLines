@@ -15,12 +15,20 @@
 
 import { bLine } from "./bresenhamLineClass.js";
 
-const canvas = document.getElementById("Bresenham");
+const bline = new bLine("lines_Bresenham");
+bline.line(50, 30, 50, 130);
+bline.line(25, 30, 250, 130);
+bline.line(25, 30, 150, 130);
+bline.line(25, 100, 250, 100);
 
-const bline = new bLine(canvas);
-bline.line(50, 50, 50, 250);
-bline.line(50, 50, 250, 250);
-bline.line(50, 50, 150, 250);
-bline.line(25, 225, 250, 225);
-bline.line(260, 150, 260, 250);
-bline.line(190, 200, 290, 200);
+const bRectangle = new bLine("squares_Bresenham");
+bRectangle.rectangle(10, 30, 30, 100);
+bRectangle.rectangle(50, 30, 30, 100);
+bRectangle.rectangle(90, 30, 30, 100);
+bRectangle.rectangle(130, 30, 30, 100);
+bRectangle.rectangle(170, 30, 30, 100);
+
+bRectangle.rectangle(210, 100, 80, 0);
+bRectangle.rectangle(270, 30, 0, 100);
+
+bRectangle.rectangleFilled(130, 30, 30, 100);
