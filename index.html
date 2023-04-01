@@ -7,23 +7,30 @@
   <title>Trying to draw 1px perfect lines on a canvas</title>
   <link href="./style.css" rel="stylesheet" />
   <script src="./js/bLine.js" type="module"></script>
+  <script src="./js/myTest.js" defer></script>
   <script src="./js/pixelPerfect.js" defer></script>
   <script src="./js/cleanWideLine_1px.js" defer></script>
-  <script src="./js/myTest.js" defer></script>
+
 </head>
 
 <body>
   <div id="container">
     <h4>Trying to draw 1px perfect lines on a canvas</h4>
 
-    <canvas id="translate-None" width="300" height="300">
+    <canvas id="squares_translate-None" width="300" height="150">
       THIS IS A FALLBACK MESSAGE FOR OLD BROWSERS. YOUR BROWSER DOES NOT
       SUPPORT CANVAS!
     </canvas>
-    <canvas id="translate-0.5" width="300" height="300"></canvas>
+    <canvas id="lines_translate-None" width="300" height="150"></canvas>
     <hr />
-    <canvas id="Bresenham" width="300" height="300"></canvas>
-    <canvas id="pixelPerfect-canvas" width="300" height="300"> </canvas>
+    <canvas id="squares_translate-0.5" width="300" height="150"></canvas>
+    <canvas id="lines_translate-0.5" width="300" height="150"></canvas>
+    <hr />
+    <canvas id="squares_pixelPerfect" width="300" height="150"></canvas>
+    <canvas id="lines_pixelPerfect" width="300" height="150"></canvas>
+    <hr />
+    <canvas id="squares_Bresenham"></canvas>
+    <canvas id="lines_Bresenham"></canvas>
     <hr />
     <canvas id="triangle1" width="300" height="300"></canvas>
     <canvas id="triangle2" width="300" height="300"></canvas>
