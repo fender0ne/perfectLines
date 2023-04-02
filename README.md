@@ -10,7 +10,7 @@ See it here in action: [demo](https://fender0ne.github.io/perfectLines/)
 
 &nbsp; 
   
-We do several line drawing tests using various techniques to see how the result looks best. Judge for yourself.
+We do several line drawing visual tests using various techniques to see how the result looks best. Judge for yourself.
 
 Information and suggested code from several stackoverflow users has been used:
 
