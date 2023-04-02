@@ -106,12 +106,6 @@ function drawExampleRectangles(ctx, x = 10, y = 30, width = 30, height = 100) {
 }
 
 function drawExampleLines(ctx) {
-  const x = 100;
-  const y = 30;
-  const gap = 10;
-  const width = 30;
-  const height = 100;
-
   ctx.lineWith = 1;
   ctx.strokeStyle = "blue";
 
@@ -123,8 +117,9 @@ function drawExampleLines(ctx) {
     ctx.closePath();
   }
 
-  // Lines ---------------------------------------------------------------------------------------------------
-  // Note: all 1px lines are better w translate(0.5,0.5) than w translate(0, 0)
+  // Lines
+  // ----------
+  // All 1px lines are better w translate(0.5,0.5) than w translate(0, 0)
 
   // Vertical line using lineTo
   drawLine(50, 30, 50, 130);

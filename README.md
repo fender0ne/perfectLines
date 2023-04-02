@@ -20,13 +20,11 @@ Information and suggested code from several stackoverflow users has been used:
 
 3. [Bresenham's line algorithm by markE Aug, 2014](https://stackoverflow.com/questions/25277023/complete-solution-for-drawing-1-pixel-line-on-html5-canvas?noredirect=1&lq=1 )
 
-4. My own tests using translate(0.5, 0.5) as suggested by GameAlchemist and other authors.
-   
-5. We could extend to __perfect rectangles__ with/without __fill__ and with/without __borders__. (See same in the [demo](https://fender0ne.github.io/perfectLines/))
-   Note: see the green rectangles w/o borders and the blue rectangles with borders.
+4. My own tests using __translate(0.5, 0.5)__ as suggested by GameAlchemist and other authors.
+Note: see the green rectangles w/o borders and the blue rectangles with borders.
 
 &nbsp; 
 
 
  [^1]: We haven't focused on improving the javascript code, and you may see old code getting mixed up with new one.  
-       Non-judgment is a simple visual test.
+ Non-judgment, it is a simple visual test.
